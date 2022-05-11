@@ -1,0 +1,57 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1,n2,i,j,k;
+    
+    cin>>n1>>n2;
+    
+    int a[n1];
+    int b[n2];
+    int c[n1+n2];
+    
+    cout<<"array 1\n";
+    for(i=0; i<n1; i++)
+    {
+        cin>>a[i];
+    }
+    
+    cout<<"array 2 \n";
+    for(i=0; i<n2; i++)
+    {
+        cin>>b[i];
+    }
+    
+    
+    for(j=0; j<n1; j++)
+    {
+        c[j] = a[j];
+    }
+    
+    int l=0;
+    for(k =j; k<n1+n2; k++)
+    {
+        c[k] = b[l];
+        l++;
+    }
+    
+    cout<<"result is\n";
+    
+    for(i=0; i<n1+n2; i++)
+    {
+        cout<<c[i]<<" ";
+    }
+    
+
+    return 0;
+}
+
+
+
+
+
+

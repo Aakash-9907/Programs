@@ -1,0 +1,64 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+   int n,m;
+    cin>>n>>m;
+    
+    int arr[n][m];
+    
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<m; j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    
+    cout<<"matris is\n";
+     for(int i=0; i<n; i++)
+     {
+         for(int j=0; j<m; j++)
+         {
+             cout<<arr[i][j]<<" ";
+         }
+         
+         cout<<"\n";
+     }
+     
+     int target;
+      bool b = false;
+     
+    cin>> target;
+    
+    
+     for(int i=0; i<n; i++)
+     {
+         for(int j=0; j<m; j++)
+         {
+             if(arr[i][j]==target)
+             {
+                b= true;
+                break;
+             }
+         }
+     }
+     
+     if(b==true)
+     {
+         cout<<"yes";
+}
+
+else
+{
+    cout<<"No";
+}
+    
+    
+    return 0;
+}

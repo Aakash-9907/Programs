@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+#include<vector>
+
+using namespace std;
+
+
+int main()
+{
+    int b,k,d,i,j,sum=0,res =-1;
+    
+    cin>>b>>k>>d;
+    vector<int> v1(k);
+    cout<<"keyboards are\n";
+    for(i=0; i<k ; i++)
+    {
+        cin>>v1[i];
+    }
+    vector<int>v2(d);
+    
+    cout<<"drives are\n";
+    for(i=0; i<d; i++)
+
+   {
+       cin>>v2[i];
+   }  
+   
+   list<int> v3;
+   
+   for(i=0; i<k; i++)
+   {
+       for(j=0; j<d; j++)
+       {
+         sum = v1[i] +v2[j];
+         if(sum>res && sum<=b)
+         {
+             res = sum;
+         }
+         
+         
+       }
+   }
+   
+   cout<<res;
+   
+  
+    
+    return 0;
+}
